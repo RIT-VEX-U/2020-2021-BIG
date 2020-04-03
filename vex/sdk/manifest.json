@@ -1,0 +1,30 @@
+{
+  "version"   : "20200203.11.00.00",
+  
+  "platforms" : [
+    {
+      "name"        : "vexv5",
+      "version"     : "20200203.11.00.00",
+      "vexos"       : "1.0.10",
+
+      "sdk"         : "1.0.10.3",
+      "copyright"   : "VEX Robotics Inc.",
+      "product"     : "276-4810",
+      "description" : "VEX V5 runtime library",
+      "license"     : "license.pdf"
+    },
+    {
+      "name"        : "vexiq",
+      "version"     : "20200120.14.00.00",
+      "vexos"       : "2.1.4.0",
+
+      "sdk"         : "0.5.7.0",
+      "copyright"   : "VEX Robotics Inc.",
+      "product"     : "228-2540",
+      "description" : "VEX IQ runtime library",
+      "license"     : "license.pdf",
+      "comment1"    : "",
+      "comment2"    : ""
+    }
+  ]
+}

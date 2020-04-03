@@ -27,7 +27,7 @@ ifeq ("$(origin T)", "command line")
 TOOLCHAIN = $(T)
 endif
 ifndef TOOLCHAIN
-TOOLCHAIN = ${HOME}/sdk
+TOOLCHAIN = vex/sdk
 endif
 
 # Verbose flag passed from app
