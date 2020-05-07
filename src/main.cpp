@@ -30,9 +30,6 @@ int main()
   comp.autonomous(Auto::autonomous);
   comp.drivercontrol(OpControl::opcontrol);
 
-  // Initialize the Robot
-  vexcodeInit();
-
   while (true)
   {
     vexDelay(100);
