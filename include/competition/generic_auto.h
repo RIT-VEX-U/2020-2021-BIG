@@ -46,8 +46,9 @@ class GenericAuto
 
     } while(blocking && !state_list.empty());
 
-
-    return false;
+    // If the method is blocking, return true because it's finished
+    // If non-blocking, return false because the list isn't empty yet
+    return blocking;
   }
 
   private:
