@@ -24,10 +24,6 @@ extern brain v5_brain;
 extern controller master;
 extern controller partner;
 
-extern TankDrive tank;
-extern bumper floor_sense;
-extern motor arm;
-
 //End Hardware Declarations
 } // namespace Hardware
 

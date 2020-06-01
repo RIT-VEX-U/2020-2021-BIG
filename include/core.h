@@ -12,6 +12,7 @@
 //Utils
 #include "../core/include/utils/pid.h"
 #include "../core/include/utils/spline_path.h"
+#include "../core/include/utils/generic_auto.h"
 
 //Top Level
 #include "../core/include/pathfinder.h"
