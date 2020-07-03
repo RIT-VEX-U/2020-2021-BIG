@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/include/**",
+                "C:/Program Files (x86)/VEX Robotics/VEXcode Pro V5/sdk/vexv5/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "C:\\Program Files (x86)\\VEX Robotics\\VEXcode Pro V5\\toolchain\\vexv5\\win32\\clang\\bin\\clang.exe",
+            "intelliSenseMode": "clang-arm"
+        }
+    ],
+    "version": 4
+}

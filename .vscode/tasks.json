@@ -1,0 +1,19 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build VEX Project",
+            "type": "shell",
+            "windows":{
+                "command": "set PATH=C:\\Program Files (x86)\\VEX Robotics\\VEXcode Pro V5\\toolchain\\vexv5\\win32\\clang\\bin;C:\\Program Files (x86)\\VEX Robotics\\VEXcode Pro V5\\toolchain\\vexv5\\win32\\gcc\\bin;C:\\Program Files (x86)\\VEX Robotics\\VEXcode Pro V5\\toolchain\\vexv5\\win32\\tools\\bin;%PATH% && make HOME=\"C:\\Program Files (x86)\\VEX Robotics\\VEXcode Pro V5\""
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
