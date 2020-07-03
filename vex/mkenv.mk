@@ -27,7 +27,7 @@ ifeq ("$(origin T)", "command line")
 TOOLCHAIN = $(T)
 endif
 ifndef TOOLCHAIN
-TOOLCHAIN = vex/sdk
+TOOLCHAIN = ${HOME}/sdk
 endif
 
 # Verbose flag passed from app
@@ -93,7 +93,7 @@ PROJECTLIB = lib$(PROJECT)
 ARCH_FLAGS = rcs
 
 # libraries
-LIBS = --start-group -lv5rt -lstdc++ -lc -lm -lgcc core/lib/libpathfinder.a --end-group
+LIBS =  --start-group -lv5rt -lstdc++ -lc -lm -lgcc --end-group
 
 # include file paths
 INC += $(addprefix -I, ${INC_F})
