@@ -8,6 +8,8 @@
 //Subsystems
 #include "../core/include/subsystems/rgb_controller.h"
 #include "../core/include/subsystems/tank_drive.h"
+#include "../core/include/subsystems/swerve_module.h"
+#include "../core/include/subsystems/swerve_drive.h"
 
 //Utils
 #include "../core/include/utils/pid.h"
