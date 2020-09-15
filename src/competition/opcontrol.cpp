@@ -1,6 +1,12 @@
 #include "competition/opcontrol.h"
+#include "core.h"
 
 using namespace Hardware;
+
+bool autorun()
+{
+  return drive.auto_drive(0, .3, 24);
+}
 
 /**
  * Code for the Driver Control period is executed below.
@@ -12,6 +18,14 @@ void OpControl::opcontrol()
   lr_dir.setBrake(brakeType::brake);
   rf_dir.setBrake(brakeType::brake);
   rr_dir.setBrake(brakeType::brake);
+
+  drive.set_drive_pid(Config::swerve_drive_config);
+
+  // GenericAuto drive_test = {autorun};
+
+  // drive_test.run(true);
+
+  // return;
 
   // OpControl Loop
   while (true)

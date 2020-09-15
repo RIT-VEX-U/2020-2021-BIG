@@ -27,6 +27,8 @@ competition comp;
  */
 int main()
 {
+  Config::initConfig();
+
   comp.autonomous(Auto::autonomous);
   comp.drivercontrol(OpControl::opcontrol);
 
