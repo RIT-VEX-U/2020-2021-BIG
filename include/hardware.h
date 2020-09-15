@@ -24,22 +24,9 @@ extern brain v5_brain;
 extern controller master;
 extern controller partner;
 
-extern motor lf_drive;
-extern motor rf_drive;
-extern motor lr_drive;
-extern motor rr_drive;
+extern motor lf, rf, lr, rr;
 
-extern motor lf_dir;
-extern motor rf_dir;
-extern motor lr_dir;
-extern motor rr_dir;
-
-extern SwerveModule lf_mod;
-extern SwerveModule rf_mod;
-extern SwerveModule lr_mod;
-extern SwerveModule rr_mod;
-
-extern SwerveDrive drive;
+extern MecanumDrive mec_drive;
 
 //End Hardware Declarations
 } // namespace Hardware
