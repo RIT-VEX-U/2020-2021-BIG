@@ -3,7 +3,7 @@
 
 using namespace Hardware;
 
-bool autorun()
+bool OpControl::autorun()
 {
   return drive.auto_drive(0, .3, 24);
 }
@@ -19,13 +19,10 @@ void OpControl::opcontrol()
   rf_dir.setBrake(brakeType::brake);
   rr_dir.setBrake(brakeType::brake);
 
-  drive.set_drive_pid(Config::swerve_drive_config);
+  GenericAuto auto1;
 
-  // GenericAuto drive_test = {autorun};
-
-  // drive_test.run(true);
-
-  // return;
+  auto1.add([](){return drive.auto_drive(0, .3, 24);});
+  auto1.add([](){return drive.auto_drive(90, .3, 6);});
 
   // OpControl Loop
   while (true)

@@ -24,6 +24,8 @@ extern brain v5_brain;
 extern controller master;
 extern controller partner;
 
+extern inertial imu;
+
 extern motor lf_drive;
 extern motor rf_drive;
 extern motor lr_drive;
