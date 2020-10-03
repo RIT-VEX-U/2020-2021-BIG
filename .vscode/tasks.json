@@ -6,14 +6,11 @@
         {
             "label": "Build VEX Project",
             "type": "shell",
-            "windows":{
-                "command": "set PATH=C:\\Program Files (x86)\\VEX Robotics\\VEXcode Pro V5\\toolchain\\vexv5\\win32\\clang\\bin;C:\\Program Files (x86)\\VEX Robotics\\VEXcode Pro V5\\toolchain\\vexv5\\win32\\gcc\\bin;C:\\Program Files (x86)\\VEX Robotics\\VEXcode Pro V5\\toolchain\\vexv5\\win32\\tools\\bin;%PATH% && make HOME=\"C:\\Program Files (x86)\\VEX Robotics\\VEXcode Pro V5\""
+            "windows": {
+                "command": "compile.bat"
             },
             "problemMatcher": [],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
+            "group": "build"
         }
     ]
 }
