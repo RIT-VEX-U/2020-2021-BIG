@@ -3,11 +3,6 @@
 
 using namespace Hardware;
 
-bool OpControl::autorun()
-{
-  return drive.auto_drive(0, .3, 24);
-}
-
 /**
  * Code for the Driver Control period is executed below.
  */
@@ -19,15 +14,24 @@ void OpControl::opcontrol()
   rf_dir.setBrake(brakeType::brake);
   rr_dir.setBrake(brakeType::brake);
 
+  drive.set_drive_pid(Config::swerve_drive_config);
+
   GenericAuto auto1;
 
   auto1.add([](){return drive.auto_drive(0, .3, 24);});
-  auto1.add([](){return drive.auto_drive(90, .3, 6);});
+  auto1.add([](){return drive.auto_drive(90, .3, 24);});
+  auto1.add([](){return drive.auto_drive(180, .3, 24);});
+  auto1.add([](){return drive.auto_drive(270, .3, 24);});
+
+  auto1.run(true);
+
+  fprintf(stderr, "Done!");
+  return;
 
   // OpControl Loop
   while (true)
   { 
-    drive.drive(master.Axis3.position(), master.Axis4.position(), master.Axis1.position());
+    // drive.drive(master.Axis3.position(), master.Axis4.position(), master.Axis1.position());
 
    
 
