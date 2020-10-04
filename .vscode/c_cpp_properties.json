@@ -12,7 +12,22 @@
                 "_UNICODE"
             ],
             "compilerPath": "C:\\Program Files (x86)\\VEX Robotics\\VEXcode Pro V5\\toolchain\\vexv5\\win32\\clang\\bin\\clang.exe",
-            "intelliSenseMode": "clang-arm"
+            "intelliSenseMode": "clang-arm",
+            "compileCommands": "${workspaceFolder}/compile_commands.json"
+        },
+        {
+            "name": "make",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "C:\\Program Files\\LLVM\\bin\\clang.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++14"
         }
     ],
     "version": 4
