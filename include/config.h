@@ -14,6 +14,7 @@ namespace Config
 // Form: extern [structName] [name];
 
 extern PID::pid_config_t swerve_drive_config;
+extern PID::pid_config_t swerve_turning_config;
 
 // End Config Declarations
 
