@@ -10,6 +10,7 @@ void OpControl::opcontrol()
 {
   
   // OpControl Init
+  while(imu.isCalibrating());
 
   // OpControl Loop
   while (true)
