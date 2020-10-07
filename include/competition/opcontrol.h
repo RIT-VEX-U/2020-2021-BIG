@@ -4,8 +4,6 @@
 namespace OpControl
 {
 
-bool autorun();
-
 void opcontrol();
 
 }

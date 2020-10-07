@@ -6,7 +6,7 @@
  * Full VexCode Text documentation available at: https://api.vexcode.cloud/v5/
  * 
  */
-
+#include "initialize.h"
 #include "vex.h"
 #include "competition/autonomous.h"
 #include "competition/opcontrol.h"
@@ -27,7 +27,7 @@ competition comp;
  */
 int main()
 {
-  Config::initConfig();
+  Init::vexcodeInit();
 
   comp.autonomous(Auto::autonomous);
   comp.drivercontrol(OpControl::opcontrol);

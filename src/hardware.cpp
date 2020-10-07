@@ -10,21 +10,26 @@ controller Hardware::partner(controllerType::partner);
 
 inertial Hardware::imu(PORT6);
 
+// Swerve Direction Motors
 motor Hardware::lf_dir(PORT2, true);
 motor Hardware::rf_dir(PORT9, true);
 motor Hardware::lr_dir(PORT12, true);
 motor Hardware::rr_dir(PORT19, true);
 
+// Swerve Drive Motors
+// gearSetting is FUNKY! they should be 18_1, but encoder readings are correct this way ¯\_(ツ)_/¯
 motor Hardware::lf_drive(PORT1, gearSetting::ratio6_1);
 motor Hardware::rf_drive(PORT10, gearSetting::ratio6_1);
 motor Hardware::lr_drive(PORT11, gearSetting::ratio6_1);
 motor Hardware::rr_drive(PORT20, gearSetting::ratio6_1);
 
+// Swerve Modules (2x motors per)
 SwerveModule Hardware::lf_mod(Hardware::lf_drive, gearSetting::ratio18_1, Hardware::lf_dir, gearSetting::ratio18_1);
 SwerveModule Hardware::rf_mod(Hardware::rf_drive, gearSetting::ratio18_1, Hardware::rf_dir, gearSetting::ratio18_1);
 SwerveModule Hardware::lr_mod(Hardware::lr_drive, gearSetting::ratio18_1, Hardware::lr_dir, gearSetting::ratio18_1);
 SwerveModule Hardware::rr_mod(Hardware::rr_drive, gearSetting::ratio18_1, Hardware::rr_dir, gearSetting::ratio18_1);
 
+// Swerve Drivetrain object. Do all 'drive related' things with this.
 SwerveDrive Hardware::drive(lf_mod, lr_mod, rf_mod, rr_mod, imu);
 
 // End Hardware Initialization
